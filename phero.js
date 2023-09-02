@@ -17,15 +17,13 @@ const showCategoryBtn = async () => {
         // console.log(data);
         const btnDiv = document.createElement('div')
         btnDiv.innerHTML = `
-        <button onclick="getCategoryId('${data.category_id}'), handleShortBtn('${data.category_id}')" class="btn hover:bg-[#FF1F3D]">${data.category}</button>
+        <button onclick="getCategoryId('${data.category_id}')" class="btn hover:bg-[#FF1F3D]">${data.category}</button>
         `
         categoryBtnContainer.appendChild(btnDiv)
 
     })
 }
 showCategoryBtn()
-
-
 
 // handler function
 const getCategoryId = (id) => {
@@ -39,26 +37,6 @@ const getCategoryId = (id) => {
     }
     
 }
-
-
-
-const handleShortBtn = async(id) => {
-    const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`)
-    const allCategory = await res.json()
-
-    const allData = allCategory.data
-    // console.log(allData);
-    const newArr = allData.map((data)=> {
-        return parseInt(data.others.views)
-    })
-    const shortArr = newArr.sort((a,b)=> {
-        return b - a
-    })
-    shortArr.forEach((value) => {
-       
-    })
-}
-
 
 const showDrawingDetails = () => {
     
@@ -145,28 +123,3 @@ const showAllCategoryCardByDefault = (id) => {
     getAllCategoryData(id)
 }
 showAllCategoryCardByDefault(1000)
-
-// short handler 
-
-
-
-// const getDataID = async() => {
-//     const response = await fetch('https://openapi.programming-hero.com/api/videos/categories')
-//     const allCategory = await response.json()
-//     const allData = allCategory.data
-//     allData.forEach((data)=> {
-//         const id = data.category_id
-//         dataById(id)
-//     })
-    
-// }
-
-// const dataById = async(id)=>{
-//     const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`)
-//     const allData = await response.json()
-//     const datas = allData.data
-//     const views = datas.forEach(data=> data.others.views)
-    
-// }
-
-handleShortBtn()
