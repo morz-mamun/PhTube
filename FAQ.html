@@ -26,18 +26,54 @@
 </head>
 
 <body>
-    <section>
-        <h1>Thanks For Coming</h1>
+    <section class="max-w-7xl mx-auto mt-10 px-10">
+       
 
-        <h2>Here Some Common Question: </h2>
-        <ol>
-            <li>1. Discuss the scope of var, let, and const</li>
-            <li>2. Tell us the use cases of null and undefined</li>
-            <li> 3. What do you mean by REST API?</li>
-        </ol>
-            
+        <h2 class="text-3xl font-bold text-red-600">Here Some Common Question: </h2>
+        <div class="my-5">
+           <h1 class="text-2xl font-semibold"> <span class="text-red-600">Question(1):</span> Discuss the scope of 'var', 'let', and 'const'.</h1>
+        <p class="font-medium text-lg"> 
+            <span class="font-bold">**</span> 
+            <span class="font-bold">'var'</span>, <span class="font-bold">'let'</span>, <span class="font-bold">'const'</span> is a keyword used to declare variables. 
+            <br> 
+            <span class="font-bold">**</span> It has function-level scope which means they are accessible throughout the entire function in which they are defined. if <span class="font-bold">'var'</span> declared outside of any function it become global variable, it can be accessible from anywhere in your code. It also hoisted. It can be re-declared and updated. <br>
+
+            <span class="font-bold">**</span> 
+            <span class="font-bold">'let'</span> and <span class="font-bold">'const'</span> have block-level scope, which means they are accessible only within the block where the are defined. <span class="font-bold">'let'</span> are mutable which means you can reassign their values after they have been declared. <br>
+            And <span class="font-bold">'const'</span> are immutable, which means their values cannot be reassigned after they are initially assigned. <span class="font-bold">'const'</span> are not hoisted. <br> In simple word <span class="font-bold">'let'</span> can be updated but not re-declared, while <span class="font-bold">'const'</span> cannot be updated or re-declared.
+        </p>
+        </div>
+
+        <div class="my-5">
+           <h1 class="text-2xl font-semibold"> <span class="text-red-600">Question(2):</span> Tell us the use cases of null and undefined</h1>
+           <p class="font-medium text-lg"> 
+            <span class="font-bold">1. 'undefined':</span> <br> 
+            <span class="font-bold">'undefined'</span> represents the absence of a value or the lack of an assigned value to a variable. It is a primitive data type in javaScript. <br>
+            <span class="font-bold">Some Common use cases of <span class="font-bold">'undefined':</span></span> <br>
+            <span class="font-bold">i. </span> Variable that have been declared but not assigned a value. <br>
+            <span class="font-bold">ii. </span> function parameters that have not been provide with an argument. <br>
+            <span class="font-bold">ii. </span> The return value of a function that doesn't explicitly return anything. <br>
+            <br>
+
+            <span class="font-bold">2. 'null':</span> <br> 
+            <span class="font-bold">'null'</span> is a deliberate assignment of an empty or non-existent value to a variable. And it also a primitive data type in JavaScript. <br>
+            <span class="font-bold">Some Common use cases of <span class="font-bold">'null':</span></span> <br>
+            <span class="font-bold">i. </span> Often used when want to reset or clear the value of a variable. <br>
+            <span class="font-bold">ii. </span> Explicitly indicating the absence of an object or value. <br>
+            <span class="font-bold">ii. </span> It is sometimes used as a placeholder value in objects.  
+
+        </p>
+        </div>
+
+        <div class="my-5">
+           <h1 class="text-2xl font-semibold"> <span class="text-red-600">Question(3):</span> What do you mean by REST API?</h1>
+           <p class="font-medium text-lg"> <span class="font-bold">REST API:</span> <br>
+            A REST API (Representational State Transfer Application Programming Interface) is a standardized way for software Application in JavaScript that allows JavaScript applications to send HTTP request to interact with remote servers or services, typically to retrieve or update data. It follows the principles of REST, using Standard HTTP methods like GET, POST, PUT, and DELETE to perform actions on resources. This enables JavaScript applications to communicate with external data sources and service over the internet.  
+        </p>
+        </div>
            
-           
+        
+        
         
     </section>
 </body>

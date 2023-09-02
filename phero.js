@@ -17,7 +17,7 @@ const showCategoryBtn = async () => {
         // console.log(data);
         const btnDiv = document.createElement('div')
         btnDiv.innerHTML = `
-        <button onclick="getCategoryId('${data.category_id}')" class="btn hover:bg-[#FF1F3D]">${data.category}</button>
+        <button onclick="getCategoryId('${data.category_id}'), handleShortBtn('${data.category_id}')" class="btn hover:bg-[#FF1F3D]">${data.category}</button>
         `
         categoryBtnContainer.appendChild(btnDiv)
 
@@ -40,9 +40,25 @@ const getCategoryId = (id) => {
     
 }
 
-const handleShortBtn = () => {
-   
+
+
+const handleShortBtn = async(id) => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`)
+    const allCategory = await res.json()
+
+    const allData = allCategory.data
+    // console.log(allData);
+    const newArr = allData.map((data)=> {
+        return parseInt(data.others.views)
+    })
+    const shortArr = newArr.sort((a,b)=> {
+        return b - a
+    })
+    shortArr.forEach((value) => {
+       
+    })
 }
+
 
 const showDrawingDetails = () => {
     
